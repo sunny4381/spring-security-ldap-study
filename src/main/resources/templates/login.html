@@ -1,18 +1,19 @@
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:with="lang=${#locale.language}" th:lang="${lang}">
 <head>
-    <title>Login Page</title>
+    <title th:text="#{login_page}">Login Page</title>
 </head>
 <body onload='document.f.username.focus();'>
 <p th:if="${loginError}">
-    <font color='red'>Your login attempt was not successful, try again.<br/><br/>Reason: <span th:text="${errorMsg}">Empty Password</span></font>
+    <font color='red'><span th:text="#{your_login_attempt_was_not_successful}">Your login attempt was not successful, try again.</span><br/><br/><span th:text="#{reason}">Reason</span>: <span th:text="${errorMsg}">Empty Password</span></font>
 </p>
-<p th:if="${logoutSuccess}"><font color='green'>You have been logged out</font></p>
-<h3>Login with Username and Password</h3>
+<p th:if="${logoutSuccess}"><font color='green'><span th:text="#{you_have_benn_logged_out}">You have been logged out</span></font></p>
+<h3 th:text="#{login_with_username_and_password}">Login with Username and Password</h3>
 <form name='f' th:action="@{/login}" method='POST'>
     <table>
-        <tr><td>User:</td><td><input type='text' name='username' value=''/></td></tr>
-        <tr><td>Password:</td><td><input type='password' name='password'/></td></tr>
-        <tr><td colspan='2'><input name="submit" type="submit" value="Login"/></td></tr>
+        <tr><td><span th:text="#{user}">User</span>:</td><td><input type='text' name='username' value=''/></td></tr>
+        <tr><td><span th:text="#{password}">Password</span>:</td><td><input type='password' name='password'/></td></tr>
+        <tr><td colspan='2'><input name="submit" type="submit" th:value="#{buttons.login}"/></td></tr>
     </table>
 </form>
 </body>
