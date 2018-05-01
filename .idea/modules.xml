@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-security-ldap-study.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-security-ldap-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-security-ldap-study_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-security-ldap-study_main.iml" group="spring-security-ldap-study" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-security-ldap-study_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-security-ldap-study_test.iml" group="spring-security-ldap-study" />
     </modules>
   </component>
 </project>
