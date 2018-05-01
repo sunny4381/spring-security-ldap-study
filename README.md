@@ -1,9 +1,9 @@
-Trivial LDAP Login Form Study with Spring Security
+Trivial LDAP Login Study with Spring Security
 ====
 
 ## Test LDAP Server
 
-To launch test ldap server, execute below commands:
+To launch test ldap server, run below commands:
 
 ~~~
 $ docker pull osixia/openldap
@@ -64,7 +64,7 @@ uniquemember: uid=user,ou=people,dc=example,dc=org
 By importing these ldif, create these users and groups
 
 | User ID | Password | Full Name | Group (= Role)   |
-|=========|==========|================|=============|
+|---------|----------|----------------|-------------|
 | admin   | password | Kazuki Shimizu | admin, user |
 | user    | password | Taro Yamada    | user        |
 
