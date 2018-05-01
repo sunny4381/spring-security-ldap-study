@@ -10,7 +10,7 @@ open class I18nConfig {
     @Bean
     open fun messageSource() : MessageSource {
         val source = ResourceBundleMessageSource()
-        source.setBasenames("i18n/messages")
+        source.setBasenames("i18n/messages", "i18n/security/messages")
         source.setCacheSeconds(0)
         source.setDefaultEncoding("UTF-8")
         return source
