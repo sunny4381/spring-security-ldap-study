@@ -14,7 +14,7 @@ open class SecurityConfig : WebSecurityConfigurerAdapter() {
                 .and()
                 .logout().permitAll() // ログアウト機能を有効化
                 .and()
-                .formLogin().permitAll(); // フォームログイン機能を有効化
+                .formLogin().loginPage("/login").permitAll() // フォームログイン機能を有効化
     }
 
     override fun configure(auth : AuthenticationManagerBuilder) {
