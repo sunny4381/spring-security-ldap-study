@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      th:with="lang=${#locale.language}" th:lang="${lang}">
 <head>
-    <title>Home</title>
+    <title th:text="#{home}">Home</title>
 </head>
 <body>
 <div>
     <!-- ログインユーザーの氏名(cn)を表示する -->
-    <h1>Hello <span sec:authentication="principal.cn[0]">User</span> !</h1>
+    <h1><span th:text="#{hello}">Hello</span> <span sec:authentication="principal.cn[0]">User</span> !</h1>
 </div>
 
 <form th:action="@{/logout}" method="post">
-    <button>Logout</button>
+    <button th:text="#{buttons.logout}">Logout</button>
 </form>
 </body>
 </html>
