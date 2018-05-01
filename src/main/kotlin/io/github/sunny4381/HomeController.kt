@@ -24,8 +24,7 @@ open class HomeController {
             val session = request.getSession(false)
             if (session != null) {
                 val ex = session.getAttribute(WebAttributes.AUTHENTICATION_EXCEPTION) as AuthenticationException
-                val errorMsg = if (ex != null) ex.message else "none"
-                model.addAttribute("errorMsg", errorMsg)
+                model.addAttribute("errorMsg", ex.message)
             }
         }
 
